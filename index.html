@@ -1,0 +1,266 @@
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight:300;
+  font-size:18px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+}	
+h1 {
+  font-weight:300;
+}
+
+.disclaimerbox {
+  background-color: #eee;		
+  border: 1px solid #eeeeee;
+  border-radius: 10px ;
+  -moz-border-radius: 10px ;
+  -webkit-border-radius: 10px ;
+  padding: 20px;
+}
+
+video.header-vid {
+  height: 140px;
+  border: 1px solid black;
+  border-radius: 10px ;
+  -moz-border-radius: 10px ;
+  -webkit-border-radius: 10px ;
+}
+
+img.header-img {
+  height: 140px;
+  border: 1px solid black;
+  border-radius: 10px ;
+  -moz-border-radius: 10px ;
+  -webkit-border-radius: 10px ;
+}
+
+img.rounded {
+  border: 0px solid #eeeeee;
+  border-radius: 10px ;
+  -moz-border-radius: 10px ;
+  -webkit-border-radius: 10px ;
+}
+
+a:link,a:visited
+  {
+  color: #1367a7;
+  text-decoration: none;
+}
+a:hover {
+  color: #208799;
+}
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .vert-cent {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  hr
+    {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+</style>
+
+<html>
+  <head>
+    <title></title>
+    <meta property="og:title" content="Low-Light Color Imaging Via Cross-Camera Synthesis" />
+  </head>
+
+  <body>
+    <br>
+    <center>
+      <span style="font-size:42px">Low-Light Color Imaging Via Cross-Camera Synthesis</span><br>
+      <table align=center width=900px>
+        <tr>
+          <td align=center width=900px>
+            <span style="font-size:22px"><a href="https://github.com/peiyaoooo">Peiyao Guo<sup>1</sup></a></span> &emsp;&emsp;&emsp;
+            <span style="font-size:22px"><a href="https://scholar.google.com/citations?user=Dl0puDcAAAAJ&hl=en">M. Salman Asif<sup>2</sup></a></span> &emsp;&emsp;&emsp;
+            <span style="font-size:22px"><a href="https://scholar.google.com/citations?user==78KxtRMAAAAJ&hl=en">Zhan Ma<sup>1</sup></a></span> &emsp;&emsp;&emsp;
+          </td>
+        </tr>
+      </table>
+      <table align=center width=800px>
+        <td align=center width=300px>
+          <span style="font-size:21px"><sup>1</sup>Nanjing University &emsp;&emsp;&emsp; <sup>2</sup>University of California at Riverside</span> &emsp;
+        </td>
+      </table>
+      <br>
+      <table align=center width=900px>
+        <tr>
+          <td align=center width=900px>
+            <center>
+              <span style="font-size:22px"><a href="">Code [PyTorch]</a></span> &emsp; &emsp;
+              <!-- <span style="font-size:22px"><a href="https://guanyingc.github.io/DeepHDRVideo-Dataset/">Dataset</a></span> &emsp; &emsp; -->
+              <span style="font-size:22px"><a href="">Paper </a> </span> &emsp; &emsp;
+              <span style="font-size:22px"><a href="">Supplementary [PDF]</a> </span>  &emsp; &emsp;
+              <!-- <span style="font-size:22px"><a href="https://github.com/guanyingc/DeepHDRVideo_Poster_LaTex/blob/master/poster_landscape.pdf">Poster</a> </span>  &emsp; &emsp; -->
+            </center>
+          </td>
+        </tr>
+      </table>
+    </center>
+    <br>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <img class="round" style="height:300px" src = "./intro_fig/Overview.png">
+        </td>
+      </tr> 
+    </table>
+    <hr>
+
+    <table align=center width=900px>
+      <center><h1>Abstract</h1></center>
+      <p>
+        This paper presents a framework for low-light color imaging using a dual camera system that combines a high spatial resolution monochromatic (HSR-mono) image and a  low spatial resolution color (LSR-color) image. We propose a cross-camera synthesis (CCS) module to learn and transfer illumination, color, and resolution attributes across paired HSR-mono and LSR-color images to recover brightness- and color-adjusted high spatial resolution color (HSR-color) images at both camera views.
+Jointly characterizing various attributes for final synthesis is extremely challenging because of significant domain gaps across cameras. %final representation
+The proposed CCS method consists of three subtasks:  reference-based illumination enhancement (RefIE), reference-based appearance transfer (RefAT), and reference-based super resolution (RefSR), by which we can characterize, transfer, and enhance illumination, color,  and resolution at both views. Each subtask is implemented using deep neural networks (DNNs) that are first trained for each subtask separately and then fine-tuned jointly.
+Experimental results suggest the superior qualitative and quantitative results of the proposed CCS model on both synthetic content from popular datasets and real-captured scenes. Ablation studies further evidence the model generalization to various exposures and camera baselines.
+      </p>
+    </table>
+    <hr>
+
+    <!--
+      <table align=center width=900px>
+      <center><h1>Introduction Talk (Video)</h1></center>
+
+      <center><iframe width="800" height="450" src="https://www.youtube.com/embed/9eMhirg7m78" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+      <br>
+      </table>
+      <hr>
+    -->
+
+    <table align=center>
+      <center><h1>Method</h1></center>
+      <tr>
+        <tr>
+        <td align=center width=1000px>
+          <img class="round" style="width:600px" src="./intro_fig/refIE_new.png"/></img>
+        </td>  
+        </tr>
+        <tr>
+        <td align=center width=1000px>
+            <br>
+            1) RefIE: Reference-based Illumination Enhancement
+        </td>
+        </tr>
+        <tr>    
+        <td align=center width=1000px>
+          <img class="round" style="width:600px" src="./intro_fig/ref_AT_new.png"/></img>
+        </td>
+        </tr>
+        <tr>
+        <td align=center width=1000px>
+            <br>
+            2) RefAT: Reference-based Appearance Transfer
+        </td>
+        </tr>
+        <tr>
+        <td align=center width=1000px>
+          <img class="round" style="width:600px" src="./intro_fig/ref_sr_new.png"/></img>
+        </td>
+        </tr>
+        <tr>
+        <td align=center width=1000px>
+            <br>
+            3) RefSR: Reference-based Super Resolution
+        </td>
+        </tr>
+      </tr>
+      <tr>
+        <td align=center>
+          <br>
+          <b>Network architecture of the proposed Cross-Camera Synthesized framework (a cascaded pipeline of RefIE, RefAT and RefSR) 
+          for a dual image pair with under-exposed LSR color and well-exposed HSR monochrome image.</b>
+        </td>
+      </tr>
+    </table>
+    <hr>
+
+    <!-- <table align=center width=900px>
+      <center><h1>Introduction Video (5 mins)</h1></center>
+      <center> -->
+        <!--
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/ibMTIdKmEAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        -->
+        <!-- <iframe width="800" height="450" src="https://www.youtube.com/embed/uqfILpoWNco" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      <!-- </center>
+      <br>
+    </table>
+    <hr> -->
+
+    <table align=center width=1000px>
+      <center><h1>Experimental Results</h1></center>
+      <center><h2>1. Quantitative Results on Simulated Dataset (MiddleBury 2014 exp6-exp3)</h2></center>
+      <table align=center width=1000px>
+        <tr> <td align=center>
+            <img class="round" style="width:1000px" src="./intro_fig/metrics_mb140603.png"/>
+          </td> </tr>
+      </table>
+
+      <center><h2>2. Visual comparison on Real-captured dataset.</h2></center>
+      <table align=center width=1000px>
+        <tr> <td align=center>
+            <img class="round" style="width:1000px" src="./intro_fig/s1_v1_120.png"/>
+            <img class="round" style="width:1000px" src="./intro_fig/s2_v1_120.png"/>
+            <img class="round" style="width:1000px" src="./intro_fig/s3_v1_120.png"/>
+          </td> </tr>
+        
+      </table>
+
+    </table>
+    <br>
+    <hr>
+
+    <table align=center width=1000px>
+      <center><h1>Code and Dataset</h1></center>
+
+      <tr>
+        <td width=1000px align=center>
+            <span style="font-size:21px">Code and models would be updated soon.</span> 
+          <!-- <span style="font-size:21px">Code and models are available at <a href=""> </a>.</span>  -->
+          <td>
+      </tr>
+      <tr>
+        <td width=1000px align=center>
+            <span style="font-size:21px">Synthetic dataset and real-captured scenes would be updated soon.</span> 
+          <!-- <span style="font-size:21px">Dataset are available at <a href=""> </a>.</span>  -->
+        <td>
+      </tr>
+    </table>
+    <hr>
+
+    <!-- <table align=center width=1000px>
+      <tr>
+        <td width=400px>
+          <center>
+          <center><h1>Acknowledgments</h1></center>
+          This work is supported by xxxxx.
+          </center>
+        </td>
+      </tr>
+    </table>
+    <br> -->
+
+    <p style="text-align:center;font-size:16px;">
+    Webpage template borrowed from <a href="https://richzhang.github.io/splitbrainauto/">Split-Brain Autoencoders, CVPR 2017</a>.
+    </p>
+  </body>
+</html>
